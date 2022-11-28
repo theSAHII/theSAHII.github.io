@@ -97,6 +97,14 @@
     }
 
     /* amenities */
+    #amenities.desktop {
+        display: none !important;
+    }
+
+    #amenities.mobile {
+        display: grid;
+    }
+
     #amenities {
         grid-template-columns: 1fr;
     }

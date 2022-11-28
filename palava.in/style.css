@@ -307,6 +307,10 @@ form .primary_btn {
 }
 
 /* amenities */
+#amenities.mobile {
+    display: none;
+}
+
 #amenities {
     margin: auto;
     grid-template-columns: 1fr 4fr;
@@ -389,7 +393,7 @@ form .primary_btn {
     display: flex;
 }
 
-.card:hover .exploreButton a:hover {
+.card:hover .exploreButton button:hover {
     transform: translateY(-10px);
 }
 

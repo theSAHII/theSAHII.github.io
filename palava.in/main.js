@@ -21,9 +21,11 @@ function amenitiesSlideShowIndex(n) {
 }
 
 function amenitiesSlide(n) {
+    let selector = document.querySelector("#amenities.desktop")
+    if (window.screen.width < 700) selector = document.querySelector("#amenities.mobile")
     let i,
-        x = document.getElementsByClassName("amenities_img_slide"),
-        y = document.getElementsByClassName("amenities_text_slide");
+        x = selector.getElementsByClassName("amenities_img_slide"),
+        y = selector.getElementsByClassName("amenities_text_slide");
     if (n >= x.length) { amenitiesSlideIndex = 1 }
     if (n < 1) { amenitiesSlideIndex = x.length }
     for (i = 0; i < x.length; i++) {
@@ -103,7 +105,15 @@ function datepicker(val) {
     }
 }
 
-document.querySelector("body>nav>button.primary_btn").onclick = function () {
+document.querySelector("body>nav>button.primary_btn").onclick = enquiryTrigger
+
+document.getElementById("closeForm").onclick = function () {
+    let form = document.querySelector("form")
+    form.classList.remove("visible")
+    form.reset()
+}
+
+function enquiryTrigger() {
     let form = document.querySelector("form")
     console.log(
         form.style.display
@@ -113,9 +123,4 @@ document.querySelector("body>nav>button.primary_btn").onclick = function () {
     else if (form.classList.contains("visible")) alert("ko")
 }
 
-document.getElementById("closeForm").onclick = function () {
-    let form = document.querySelector("form")
-    form.classList.remove("visible")
-    form.reset()
-}
 //
