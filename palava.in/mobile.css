@@ -1,0 +1,212 @@
+@media only screen and (max-width: 720px) {
+
+    /* hero image */
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: initial;
+    }
+
+    /* nav */
+    body>nav {
+        position: unset;
+        position: fixed;
+        top: unset;
+        bottom: 0;
+        z-index: 90;
+        justify-content: flex-end;
+    }
+
+    body>nav>button.primary_btn {
+        margin: 0;
+        width: 100%;
+        align-self: flex-end;
+    }
+
+    /* hero */
+    #hero {
+        flex-direction: column;
+    }
+
+    #hero span,
+    #hero span #hero_img {
+        width: 100%;
+    }
+
+    #closeForm {
+        display: block;
+    }
+
+    #hero form {
+        display: none;
+    }
+
+    #hero form.visible {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 99;
+        display: flex;
+    }
+
+    form * {
+        margin-top: 9px;
+        margin-bottom: 9px;
+    }
+
+    form>span#btns {
+        display: flex;
+    }
+
+    form>span>button.primary_btn {
+        width: 50%;
+    }
+
+    form .flex .flex {
+        gap: 9px;
+    }
+
+    form .flex label {
+        margin: 0;
+    }
+
+    /* project detials */
+    #project_details * .title,
+    #project_details * .subtitle {
+        width: 100% !important;
+        line-height: 30px;
+    }
+
+    #project_details div span.flex.center {
+        width: 100%;
+        justify-content: unset;
+        align-items: flex-start;
+    }
+
+    #project_details div,
+    #project_details div span {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #project_description {
+        width: 96%;
+        align-self: flex-start;
+    }
+
+    /* amenities */
+    #amenities {
+        grid-template-columns: 1fr;
+    }
+
+    #amenities h1 {
+        font-size: x-large;
+        text-align: center;
+    }
+
+    #amenities .right {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    #amenities .right img {
+        width: 150%;
+    }
+
+    #amenities div,
+    #amenities div * .icon_btn {
+        background: var(--clr-2);
+        color: var(--clr-3);
+    }
+
+    .amenities_text_slide {
+        font-size: medium;
+        margin-bottom: 0;
+    }
+
+    #amenities div p {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 15px;
+    }
+
+    /* plans & pricing */
+    #plansPrice {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    #plansPrice span {
+        width: calc(50% -25px);
+        height: 100px;
+        padding: 9px 25px 0px 25px;
+        justify-content: center;
+    }
+
+    #plansPrice .cards {
+        display: block;
+        width: 250px;
+        height: 230px;
+        transform: translate(45%, -24%);
+        overflow: hidden;
+        overflow-y: scroll;
+        scroll-behavior: smooth;
+    }
+
+    #plansPrice .cards .card {
+        float: left;
+        width: 200px !important;
+        transform: unset;
+    }
+
+    /* life at palava */
+    #slideshow {
+        width: 100%;
+    }
+
+    /* accordian */
+    #accordian {
+        margin: auto;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        width: 80%;
+    }
+
+    summary {
+        font-size: small;
+    }
+
+    details {
+        padding: 9px 0 !important;
+    }
+
+    /* footer */
+    footer {
+        width: calc(var(--full-width) - 48px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+
+    footer nav {
+        display: flex;
+        align-self: center;
+    }
+
+    footer .flex {
+        padding: 18px 0 !important;
+        flex: 1 1 auto;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    footer .flex span.links * {
+        padding: 9px 0;
+        font-size: small;
+    }
+
+}

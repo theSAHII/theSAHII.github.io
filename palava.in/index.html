@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="ico/favicon.ico" type="image/vnd.microsoft.icon">
+    <title>Palava Ready Homes | palavacity</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile.css">
+</head>
+
+<body>
+    <br>
+    <header class="flex center">
+        <a class="logo" href="/" title="Home" rel="home">
+            <img src="ico/palava-city-logo.png" alt="Home">
+        </a>
+    </header>
+    <nav class="flex">
+        <button type="button" class="primary_btn">Enquiry</button>
+    </nav>
+    <main class="flex" id="hero">
+        <span>
+            <span id="hero_img">
+                <img class="desktop" src="ico/hero_desktop.jpg">
+                <img class="mobile"
+                    src="https://palavacityassets-uat-tfz.s3.ap-south-1.amazonaws.com/assets/projects/640x750_Palava_RTMI_03.jpg">
+            </span>
+            <div class="flex" id="hero_img_keynote">
+                <span>
+                    <p>Price</p>
+                    <h3>₹ 43.99 Lacs*+ (All-in)</h3>
+                </span>
+                <span>
+                    <p>Typology</p>
+                    <h3> 1, 2, 2.5 BHK </h3>
+                </span>
+                <span>
+                    <p>Possession Status</p>
+                    <h3> Ready-to-move-in </h3>
+                </span>
+            </div>
+        </span>
+        <form autocomplete="off"
+            action="https://script.google.com/macros/s/AKfycbwivsA4OJ4UJcahXiM_7iXQcvEhY89lltXF7bHs_rZwhYmIKlWGfOYjUF3p0s3uEIF5-Q/exec"
+            method="post">
+            <h3>GET IN TOUCH</h3>
+            <input type="text" name="name" placeholder="Name" id="fname" required>
+            <input type="text" name="email" placeholder="Email-Id" id="femail" required>
+            <select name="country" id="country" required>
+                <option value="India" data-code="IN" data-dial="+91" selected="">India</option>
+            </select>
+            <select name="city" id="city" required>
+            </select>
+            <input type="text" name="country_code" value="+91" readonly>
+            <input type="tel" name="contact_no" placeholder="Mobile No." required>
+            <div class="flex">
+                <label class="grid">
+                    <input type="checkbox" name="whatsapp" value="0" id="freceivewhatsappupdates" />
+                    <span>Receive updates on Whatsapp</span>
+                </label>
+            </div>
+            <span class="flex">
+                <label class="flex">
+                    <input name="radio1" type="radio" value="enquire" id="fenquire" checked=""
+                        onchange="datepicker(this.value)" required />
+                    <span>Enquire</span>
+                </label>
+                <label class="flex">
+                    <input name="radio1" type="radio" value="visit" id="fbookasitevisit"
+                        onchange="datepicker(this.value)" required>
+                    <span>Book a site visit</span>
+                </label>
+            </span>
+            <input name="site_visit_date" id="fdatetimepicker" type="datetime-local" />
+            <span id="btns">
+                <button type="button" class="primary_btn" id="closeForm">Close</button>
+                <button type="submit" class="primary_btn">Submit</button>
+            </span>
+        </form>
+    </main>
+    <br>
+    <br>
+    <span class="flex center" id="project_details">
+        <div>
+            <span class="flex center">
+                <h2 class="title">GREAT PAYMENT PLANS</h2>
+                <h2 class="subtitle">
+                    Pay only 5%&nbsp;&amp; move in<sup>#</sup>
+                    <br>
+                    No EMI till 2024**
+                </h2>
+            </span>
+            <br>
+            <br>
+            <span class="flex">
+                <h2 class="title">READY HOMES WITH GREAT AMENITIES</h2>
+                <span id="project_description">
+                    <span>
+                        <strong>CLOSER TO DOMBIVLI STATION, MORE THAN EVER</strong>
+                        <p>
+                            With the Central Avenue now open, Kalyan-Shil road is just a 5 min leisurely drive from your
+                            home at
+                            Palava.
+                            Enjoy private access to this road and save valuable time and instead spend more
+                            irreplaceable
+                            time
+                            with
+                            your
+                            loved ones. The buses from the transport hub today rides you to Dombivli station &amp;
+                            Xperia
+                            Mall.
+                            The
+                            bus
+                            services to the key business hubs of BKC, Powai, Andheri, Airoli, Lower Parel, etc.
+                            providing
+                            swift
+                            connectivity
+                            will also begin shortly.
+                        </p>
+                    </span>
+                    <br>
+                    <span>
+                        <strong>LIVE A LIFE OF CONVENIENCE WITH EVERYTHING JUST A WALK
+                            AWAY</strong>
+                        <p>
+                            Be it a retail high-street, olympic sports centre, access to world-class education with the
+                            best
+                            schools,
+                            offices, lakeside park, playgrounds, temples with the city’s smart infrastructure and
+                            highest levels
+                            of
+                            safety
+                            and security, you can enjoy the convenience of a multitude of world-class amenities located
+                            just
+                            around
+                            the
+                            corner.
+                        </p>
+                    </span>
+                </span>
+            </span>
+        </div>
+    </span>
+    <br>
+    <br>
+    <br>
+    <br>
+    <main class="grid desktop" id="amenities">
+        <section class="left">
+            <h1>Amenities at Palava Ready Homes</h1>
+            <br>
+            <span class="flex">
+                <p class="subtitle amenities_text_slide">A Central Avenue that offers many shopping outlets and dining
+                    options to choose from
+                </p>
+                <p class="subtitle amenities_text_slide">The perfect place for a leisurely stroll; Lakeside Park</p>
+            </span>
+            <br>
+            <p>
+                <button type="button" class="primary_btn">View More</button>
+                <span class="flex">
+                    <button type="button" class="icon_btn" onclick="amenitiesSlideSlideIndex(-1)">
+                        <h1> ← </h1>
+                    </button>
+                    <span class="flex center" id="amenities_slider_count">1/2</span>
+                    <button type="button" class="icon_btn" onclick="amenitiesSlideSlideIndex(1)">
+                        <h1> → </h1>
+                    </button>
+                </span>
+            </p>
+        </section>
+        <section class="right flex">
+            <img class="amenities_img_slide" src="ico/1349x550-sernity.jpg">
+            <img class="amenities_img_slide" src="ico/Key-Amenities-1349-X-550.jpg">
+        </section>
+    </main>
+    <main class="grid mobile" id="amenities" style="display: none;">
+        <h1>Amenities at Palava Ready Homes</h1>
+        <br>
+        <br>
+        <br>
+        <section class="right flex">
+            <img class="amenities_img_slide" src="ico/1349x550-sernity.jpg">
+            <img class="amenities_img_slide" src="ico/Key-Amenities-1349-X-550.jpg">
+        </section>
+        <div>
+            <span class="flex">
+                <p class="subtitle amenities_text_slide">A Central Avenue that offers many shopping outlets and dining
+                    options to choose from
+                </p>
+                <p class="subtitle amenities_text_slide">The perfect place for a leisurely stroll; Lakeside Park</p>
+            </span>
+            <p>
+                <button type="button" class="primary_btn">View More</button>
+                <span class="flex">
+                    <button type="button" class="icon_btn" onclick="amenitiesSlideSlideIndex(-1)">
+                        <h1> ← </h1>
+                    </button>
+                    <span class="flex center" id="amenities_slider_count">1/2</span>
+                    <button type="button" class="icon_btn" onclick="amenitiesSlideSlideIndex(1)">
+                        <h1> → </h1>
+                    </button>
+                </span>
+            </p>
+        </div>
+    </main>
+    <br>
+    <br>
+    <br>
+    <main class="" id="plansPrice">
+        <span class="flex center">
+            <h2>PLANS &amp; PRICES</h2>
+        </span>
+        <!-- <span></span> -->
+        <div class="cards flex">
+            <div class="card">
+                <br>
+                <h3>
+                    Type
+                </h3>
+                <h2>1 BHK</h2>
+                <br>
+                <h3>
+                    Starting
+                </h3>
+                <h2>₹ 43.99 Lacs +</h2>
+                <div class="exploreButton flex center">
+                    <a class="primary_btn" tabindex="0">View
+                        Details</a>
+                </div>
+            </div>
+            <div class="card">
+                <br>
+                <h3>
+                    Type
+                </h3>
+                <h2>2 BHK</h2>
+                <br>
+                <h3>
+                    Starting
+                </h3>
+                <h2>₹ 57.99 Lacs +</h2>
+                <div class="exploreButton flex center">
+                    <a class="primary_btn" tabindex="0">View
+                        Details</a>
+                </div>
+            </div>
+            <div class="card">
+                <br>
+                <h3>
+                    Type
+                </h3>
+                <h2>2.5 BHK</h2>
+                <br>
+                <h3>
+                    Starting
+                </h3>
+                <h2>₹ 67.99 Lacs +</h2>
+                <div class="exploreButton flex center">
+                    <a class="primary_btn" tabindex="0">View
+                        Details</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <main class="" id="lifePalava">
+        <div id="slideshow">
+            <h1 class="title">LIFE AT PALAVA</h1>
+            <div class="slideshow_card">
+                <img src="ico/life-in-palava-1.jpg" alt="Families get together to celebrate Diwali.">
+                <p>Families get together to celebrate Diwali.</p>
+            </div>
+            <div class="slideshow_card">
+                <img src="ico/life-in-palava-2.jpg" alt="AIMS Medical Centre">
+                <p>AIMS Medical Centre</p>
+            </div>
+            <div class="slideshow_card">
+                <img src="ico/life-in-palava-3.jpg" alt="Ready for the Dive at Olympic Sports Complex">
+                <p>Ready for the Dive at Olympic Sports Complex</p>
+            </div>
+            <div class="slideshow_card">
+                <img src="ico/life-in-palava-4.jpg" alt="Xperia Summer Carnival">
+                <p>Xperia Summer Carnival</p>
+            </div>
+            <div class="slideshow_card">
+                <img src="ico/life-in-palava-5.jpg" alt="Yoga by the Greens">
+                <p>Yoga by the Greens</p>
+            </div>
+            <button type="button" class="block_icon_btn" onclick="lifeAtPalavaSlideIndex(-1)">&#10094;</button>
+            <button type="button" class="block_icon_btn" onclick="lifeAtPalavaSlideIndex(1)">&#10095;</button>
+        </div>
+    </main>
+
+    <section id="accordian">
+        <hr>
+        <details class="containerWrapper PalavaAccordian">
+            <summary class="accordion accordionTitle  activeAccordionContainer">
+                <h3>Palava Ready Homes RERA Number</h3>
+            </summary>
+            <hr>
+            <span>
+                MahaRERA Registration No.: P51700013462, P51700015660, P51700015016, P51700015090, P51700010960,
+                P51700013073, P51700011068, P51700013158, P51700013145, P51700013462, P51700010109,
+                P51700011629,
+                P51700000506, P51700000696 and are available on the website <strong>&nbsp;<a
+                        href="https://maharera.mahaonline.gov.in/">https://maharera.mahaonline.gov.in</a>&nbsp;</strong>under
+                registered projects.
+                <br>
+            </span>
+        </details>
+        <hr>
+        <details>
+            <summary class="accordion accordionTitle">
+                <h3>Disclaimers</h3>
+            </summary>
+            <hr>
+            <span>
+                *Inclusive of stamp duty and other taxes<br>
+                **Subject to timely payments.&nbsp;EMI on home loan applicable from date of agreement till
+                receiving
+                Occupancy certificate shall be paid by the developer. Amount paid shall be&nbsp;based on&nbsp;an
+                assumed
+                tenure of 20 years (any difference will need to be paid by the purchaser and will be
+                computed&nbsp;on
+                the basis&nbsp;that lender’s home-loan rate is &lt; or =7%.<br>
+                <sup>#</sup>Maintenance charges extra<br>
+                <sup>@</sup>approximately
+            </span>
+        </details>
+        <hr>
+    </section>
+
+    <footer>
+        <nav>
+            <a href="">Home</a> >
+            <a href="">Palava Ready Homes</a> >
+            <a href="">About</a>
+        </nav>
+        <br>
+
+        <span class="flex">
+            <div class="copy grid">
+                <span class="svgBox" data-svg="/themes/palava/images/svg/lodhalogo.svg">
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="136px" height="20px"
+                        viewBox="0 0 377.927 50" enable-background="new 0 0 377.927 50" xml:space="preserve">
+                        <g>
+                            <rect y="43.837" fill-rule="evenodd" clip-rule="evenodd" fill="#ffffff" width="30.012"
+                                height="4.796">
+                            </rect>
+                            <rect y="1.435" fill-rule="evenodd" clip-rule="evenodd" fill="#ffffff" width="30.012"
+                                height="4.789">
+                            </rect>
+                            <rect y="12.034" fill-rule="evenodd" clip-rule="evenodd" fill="#ffffff" width="30.012"
+                                height="4.792">
+                            </rect>
+                            <rect y="22.666" fill-rule="evenodd" clip-rule="evenodd" fill="#ffffff" width="30.012"
+                                height="4.732">
+                            </rect>
+                            <rect y="33.232" fill-rule="evenodd" clip-rule="evenodd" fill="#ffffff" width="30.012"
+                                height="4.798">
+                            </rect>
+                            <polygon fill="#ffffff"
+                                points="60.022,48.64 60.022,1.435 71.496,1.435 71.496,39.643 107.812,39.643 107.812,48.64 	">
+                            </polygon>
+                            <path fill="#ffffff" d="M173.996,24.966c0,7-2.723,12.765-8.158,17.28c-2.995,2.481-6.527,4.392-10.594,5.741
+                                                  C151.18,49.33,146.715,50,141.848,50c-4.827,0-9.279-0.67-13.367-2.013c-4.086-1.35-7.602-3.26-10.562-5.741
+                                                  c-2.701-2.214-4.716-4.781-6.062-7.689c-1.343-2.911-2.023-6.105-2.023-9.59c0-3.428,0.689-6.589,2.054-9.484
+                                                  c1.366-2.893,3.399-5.446,6.101-7.657c2.997-2.482,6.547-4.405,10.656-5.768C132.754,0.683,137.171,0,141.912,0
+                                                  c4.736,0,9.16,0.683,13.271,2.058c4.109,1.363,7.659,3.286,10.654,5.768C171.273,12.341,173.996,18.057,173.996,24.966
+                                                  M162.188,24.966c0-2.341-0.479-4.485-1.432-6.422c-0.955-1.93-2.312-3.592-4.074-4.982c-1.765-1.398-3.893-2.481-6.389-3.26
+                                                  c-2.504-0.788-5.299-1.18-8.381-1.18c-3.088,0-5.879,0.393-8.381,1.18c-2.492,0.779-4.624,1.862-6.383,3.26
+                                                  c-1.762,1.39-3.123,3.053-4.076,4.982c-0.961,1.937-1.436,4.081-1.436,6.422c0,2.398,0.466,4.567,1.402,6.528
+                                                  c0.934,1.948,2.277,3.62,4.039,5.02c1.76,1.394,3.883,2.464,6.357,3.231c2.476,0.752,5.283,1.131,8.412,1.131
+                                                  c3.125,0,5.941-0.379,8.445-1.131c2.496-0.768,4.624-1.838,6.389-3.231c1.762-1.399,3.119-3.071,4.074-5.02
+                                                  C161.709,29.533,162.188,27.364,162.188,24.966"></path>
+                            <path fill="#ffffff" d="M226.067,3.16c3.518,1.151,6.521,2.784,9.001,4.892c2.475,2.104,4.375,4.655,5.7,7.63
+                                                  c1.328,2.978,1.993,6.268,1.993,9.87c0,6.955-2.806,12.655-8.411,17.088c-2.387,1.915-5.188,3.39-8.382,4.433
+                                                  c-3.196,1.047-6.602,1.567-10.201,1.567h-33.252V1.435h31.682C218.586,1.435,222.553,2.012,226.067,3.16 M222.118,38.006
+                                                  c2.288-1.093,4.164-2.578,5.65-4.462c1.948-2.482,2.932-5.209,2.932-8.183c0-2.14-0.391-4.125-1.178-5.958
+                                                  c-0.784-1.833-1.866-3.416-3.257-4.75c-1.396-1.331-3.061-2.362-4.994-3.107c-1.934-0.743-4.046-1.12-6.356-1.12h-20.926v29.216
+                                                  h20.993C217.46,39.643,219.843,39.093,222.118,38.006"></path>
+                            <polygon fill="#ffffff"
+                                points="295.897,48.64 295.897,28.358 261.799,28.358 261.799,48.64 250.327,48.64 250.327,1.497 
+                                                     261.799,1.497 261.799,18.708 295.897,18.708 295.897,1.497 307.373,1.497 307.373,48.64 	">
+                            </polygon>
+                            <path fill="#ffffff" d="M366.319,48.64l-5.42-10.179h-30.243L325.24,48.64h-11.604l25.103-47.205h14.147l25.04,47.205H366.319z
+                                                  M345.719,10.105l-10.367,19.367h20.727L345.719,10.105z"></path>
+                        </g>
+                    </svg>
+                </span>
+                <small>© LODHAGroup 2018</small>
+            </div>
+            <img src="ico/palava-city-logo-white.png">
+            <span class="flex links" style="margin: 0 6px;">
+                <a href="/sitemap">Site map</a>
+                <a href="/terms-conditions">Terms &amp; Condition</a>
+                <a href="/privacy-policy">Privacy Policy</a>
+            </span>
+        </span>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
