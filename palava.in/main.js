@@ -115,12 +115,11 @@ document.getElementById("closeForm").onclick = function () {
 
 function enquiryTrigger() {
     let form = document.querySelector("form")
-    console.log(
-        form.style.display
-    )
-    if (form.style.display != "none") form.scrollIntoView(true)
-    if (!form.style.display) form.classList.add("visible")
-    else if (form.classList.contains("visible")) alert("ko")
+    if (window.screen.width < 700) form.classList.add("visible")
+    else if (window.screen.width > 700) {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
 }
 
 //
