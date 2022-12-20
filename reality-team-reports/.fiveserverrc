@@ -1,0 +1,24 @@
+{
+    "root": "./",
+    "open": "./src/pages/login.html",
+    "browser": [
+        "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe  --profile-directory=Profile 2"
+    ],
+    "ignore": [
+        ".cache",
+        "config",
+        "*.exe",
+        "*.pem"
+    ],
+    "https": true,
+    "xhost": "localhost",
+    "xuseLocalIp": "truefalse",
+    "port": 5555,
+    "highlight": true,
+    "injectBody": true,
+    "remoteLogs": false,
+    "xremoteLogs": "yellow",
+    "injectCss": true,
+    "navigate": false,
+    "open terminal": false
+}

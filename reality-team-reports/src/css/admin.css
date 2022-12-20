@@ -1,0 +1,26 @@
+* {
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    font-family: sans-serif;
+}
+
+html,
+body {
+    width: 96vw;
+    height: 95vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    display: flex;
+    width: 96%;
+    justify-content: space-between;
+    align-items: center;
+    align-self: center;
+}
+
+#search-box {
+    align-self: center;
+}
