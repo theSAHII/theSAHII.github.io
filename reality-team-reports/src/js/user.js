@@ -9,31 +9,29 @@ let _data = undefined
 
 const _requestFor = {
     data: function () {
-        Fetch.Get("type=admin")
+        Fetch.Get("name=Jyoti")
             .then(result => {
                 _data = arr2obj(result)
                 for (let data of Object.values(_data))
                     dom.add.stat(data);
 
-                setTimeout(() => sort.init(), 500);
+                // setTimeout(() => sort.init(), 500);
                 // console.log(result)
             })
     },
     update: {
         status: function (e, statusType) {
-            let parent = e.parentNode.parentNode,
+            let parent = e.parentNode.parentNode.parentNode,
                 dataID = parent.getAttribute("data-id")
 
             if (statusType == 1) {  //  approve
-                Fetch.Get(`type=update&id=${dataID}&status=1`)
-                    // Fetch.Post({ type: "update", id: dataID, status: 1 })
+                Fetch.Post({ type: "update", id: dataID, status: 1 })
                     .then(res => {
-                        // dom.update.status(1, parent)
+                        dom.update.status(1, parent)
                         console.log(res)
                     })
             } else if (statusType == -1) {  //  reject
-                Fetch.Get(`type=update&id=${dataID}&status=-1`)
-                    // Fetch.Post({ type: "update", id: dataID, status: -1 })
+                Fetch.Post({ type: "update", id: dataID, status: -1 })
                     .then(res => {
                         dom.update.status(-1, parent)
                         console.log(res)

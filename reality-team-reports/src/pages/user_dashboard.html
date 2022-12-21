@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USER</title>
+
+    <link rel="stylesheet" href="../css/buttons.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+
+<body>
+    <h1>
+        <span>Welcome <var-username></var-username></span>
+        <button type="button" id="view-switcher" class="preventTextSelection">STATS</button>
+    </h1>
+
+    <p id="info"></p>
+
+    <div id="search-box">
+        <input type="search" name="search" placeholder="Search" tabindex="0" accesskey="/">
+    </div>
+
+    <span id="pages">
+        <div id="stats">
+            <select name="showSTATS" class="preventTextSelection">
+                <option value="daily">daily</option>
+                <option value="weekly" selected>weekly</option>
+                <option value="monthly">monthly</option>
+                <option value="quarterly">quarterly</option>
+                <option value="half_yearly">half yearly</option>
+                <option value="yearly">yearly</option>
+            </select>
+            <button type="button" id="sort-btn" class="preventTextSelection">ASC</button>
+            <p></p>
+            <table id="daily"></table>
+            <table id="weekly"></table>
+            <table id="monthly"></table>
+            <table id="quarterly"></table>
+            <table id="half_yearly"></table>
+            <table id="yearly"></table>
+        </div>
+        <table id="pending" class="container"></table>
+        <table id="reject" class="container"></table>
+    </span>
+
+    <script src="../lib/basket.full.min.js"></script>
+    <script src="../lib/CookieJS.js"></script>
+    <script src="../js/utils.js"></script>
+    <script src="../js/calender.js"></script>
+    <script src="../js/dashboard.js"></script>
+    <script src="../js/user.js"></script>
+</body>
+
+</html>

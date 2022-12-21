@@ -19,7 +19,8 @@ const Fetch = {
         ))
     },
     Get: function (query) {
-        const api = "https://script.google.com/macros/s/AKfycbwBGe323EqEQBI1gfdYR-YEM0YrUtjAk75DM9CBIgQUpe2z9h6tlQtjhr78jGWdP_S2mw/exec?" + query;
+        // const api = "https://script.google.com/macros/s/AKfycbwBGe323EqEQBI1gfdYR-YEM0YrUtjAk75DM9CBIgQUpe2z9h6tlQtjhr78jGWdP_S2mw/exec?" + query;
+        const api = "https://script.google.com/macros/s/AKfycbxVHrGqcC4jG_wPtkSkT_cwbtGkdZ5PfDZiQW0j-HRcSHusR0XhVdIqjBmJO7zexXs-XA/exec?" + query;
         let options = {
             method: "GET"
         }
