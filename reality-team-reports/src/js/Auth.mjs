@@ -26,10 +26,14 @@ function Login() {
     signInWithPopup(auth, provider)
         .then((result) => {
             let user = result.user
+            let username = (user.email).split("@")[0]
 
-            CookieJS.set({ name: "name", value: user.displayName, expiry: 1 })
+            console.log(username)
+
+            CookieJS.set({ name: "name", value: username, expiry: 1 })
             CookieJS.set({ name: "email", value: user.email, expiry: 1 })
 
+            // return
             window.location.href = "identify_user.html"
         })
 }
@@ -40,6 +44,7 @@ function Logout() {
     signOut(auth)
         .then(() => {
             CookieJS.delete()
+            // return
             alert("Logged Out Successfully.")
             window.location.href = "login.html"
         })

@@ -6,47 +6,58 @@
 //     { url: "../js/dashboard.js", key: "dashboardJS" },
 // ).then((result) => InitializePage())
 let _data = undefined
+let username = undefined
 
 const _requestFor = {
     data: function () {
-        Fetch.Get("name=Jyoti")
+        Fetch.Get("type=user&name=Jyoti")
             .then(result => {
                 _data = arr2obj(result)
                 for (let data of Object.values(_data))
                     dom.add.stat(data);
-
-                // setTimeout(() => sort.init(), 500);
-                // console.log(result)
             })
     },
     update: {
         status: function (e, statusType) {
-            let parent = e.parentNode.parentNode.parentNode,
+            let parent = e.parentNode.parentNode,
                 dataID = parent.getAttribute("data-id")
 
             if (statusType == 1) {  //  approve
-                Fetch.Post({ type: "update", id: dataID, status: 1 })
+                Fetch.Get(`type=update&id=${dataID}&status=0`)
                     .then(res => {
-                        dom.update.status(1, parent)
-                        console.log(res)
-                    })
-            } else if (statusType == -1) {  //  reject
-                Fetch.Post({ type: "update", id: dataID, status: -1 })
-                    .then(res => {
-                        dom.update.status(-1, parent)
-                        console.log(res)
+                        dom.update.status(0, parent)
+                        dom.viewHandler.notify("Send For Approval")
                     })
             }
         }
     }
 }
-// _requestFor.update.status(this,1)
+
+function FormHandler(e) {
+    e.preventDefault()
+
+    let v = _$("#form [name='visits']").value
+    let b = _$("#form [name='bookings']").value
+    let c = _$("#form [name='value']").value
+    let query = `type=form&name=${username}&visits=${v}&bookings=${b}&value=${c}`
+
+    // console.log(query)
+
+    Fetch.Get(query)
+        .then(result => {
+            dom.viewHandler.notify("Send for Approval.")
+            window.location.reload()
+        })
+}
 
 // init
 function init_user() {
-    currentViewNo = 0
+    currentViewNo = 2
     init_dashboard()
 
     _requestFor.data()
+
+    _$("#form").onsubmit = FormHandler
 }
 init_user()
+

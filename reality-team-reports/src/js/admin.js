@@ -6,6 +6,7 @@
 //     { url: "../js/dashboard.js", key: "dashboardJS" },
 // ).then((result) => InitializePage())
 let _data = undefined
+let username = undefined
 
 const _requestFor = {
     data: function () {
@@ -14,9 +15,6 @@ const _requestFor = {
                 _data = arr2obj(result)
                 for (let data of Object.values(_data))
                     dom.add.stat(data);
-
-                setTimeout(() => sort.init(), 500);
-                // console.log(result)
             })
     },
     update: {
@@ -28,15 +26,15 @@ const _requestFor = {
                 Fetch.Get(`type=update&id=${dataID}&status=1`)
                     // Fetch.Post({ type: "update", id: dataID, status: 1 })
                     .then(res => {
-                        // dom.update.status(1, parent)
-                        console.log(res)
+                        dom.update.status(1, parent)
+                        dom.viewHandler.notify("Approved")
                     })
             } else if (statusType == -1) {  //  reject
                 Fetch.Get(`type=update&id=${dataID}&status=-1`)
                     // Fetch.Post({ type: "update", id: dataID, status: -1 })
                     .then(res => {
                         dom.update.status(-1, parent)
-                        console.log(res)
+                        dom.viewHandler.notify("Rejected")
                     })
             }
         }
@@ -45,10 +43,10 @@ const _requestFor = {
 // _requestFor.update.status(this,1)
 
 // init
-function init_user() {
+function init_admin() {
     currentViewNo = 0
     init_dashboard()
 
     _requestFor.data()
 }
-init_user()
+init_admin()

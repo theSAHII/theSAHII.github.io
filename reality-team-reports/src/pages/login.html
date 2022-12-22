@@ -16,7 +16,8 @@
     <button id="loginBtn">LOGIN</button>
 
     <script type="module">
-        import { Login } from "../js/Auth.mjs"
+        import { Login, Logout } from "../js/Auth.mjs"
+        Logout()
         document.querySelector("#loginBtn").onclick = Login;
     </script>
 </body>

@@ -80,9 +80,9 @@ const Calender = {
             date: function (year, monthNo, date) {
                 return {
                     year: year,
-                    halfYearNo: Math.ceil((monthNo + 1) / 6),
+                    halfYearNo: Math.ceil((monthNo) / 6),
                     halfYearName: alpha_nth[Math.ceil((monthNo) / 6)] + " Half",
-                    quarterNo: Math.ceil((monthNo + 1) / 3),
+                    quarterNo: Math.ceil((monthNo) / 3),
                     quarterName: alpha_nth[Math.ceil((monthNo) / 3)] + " Quarter",
                     monthNo: monthNo,
                     monthName: months[monthNo] + "",

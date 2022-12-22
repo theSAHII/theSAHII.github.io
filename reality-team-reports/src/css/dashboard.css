@@ -1,3 +1,7 @@
+h1.title {
+    font-size: 180%;
+}
+
 .hide {
     display: none;
 }
@@ -13,20 +17,13 @@
     cursor: pointer;
 }
 
-th {
-    padding: 3px 0;
-    font-size: small;
-    font-weight: bold;
-    border-top: 1px solid;
-    border-bottom: 1px solid;
-}
-
 /* search box */
 #search-box {
     margin: 18px;
     padding: 3px;
 
-    box-shadow: 0 0 1px #000;
+    border: 1px solid #00000090;
+    border-radius: 3px;
 }
 
 #search-box input[name="search"] {
@@ -35,8 +32,8 @@ th {
 
     outline: none;
     border: none;
-    background-color: #00000006;
 }
+
 
 /* dropdownlist */
 select,
@@ -58,9 +55,54 @@ select+button {
     display: flex;
     position: relative;
     justify-content: center;
+    overflow: scroll;
 }
 
 /* table */
+table {
+    width: 100% !important;
+    border-collapse: collapse;
+
+    position: relative;
+}
+
+thead {
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+}
+
+thead::before,
+thead::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: currentColor;
+}
+
+thead::before {
+    top: 0;
+}
+
+thead::after {
+    bottom: 0;
+    translate: 0 -2px;
+}
+
+th,
+td {
+    padding: 0 9px;
+    min-width: 80px;
+    text-align: center;
+}
+
+th {
+    padding: 6px 0;
+    font-size: small;
+    font-weight: bold;
+}
+
 table * svg {
     width: 27px;
     height: 27px;
@@ -78,18 +120,24 @@ table * [type="reject"]:hover svg {
     fill: red;
 }
 
+#pending * td:nth-of-type(-n+2),
+#reject * td:nth-of-type(-n+2) {
+    text-align: left;
+}
+
 .btn {
     position: relative;
 }
 
+
 .btn::before {
     content: "";
     position: absolute;
-    top: -10px;
+    top: 0px;
     left: 12px;
     width: 21px;
     height: 21px;
-    z-index: -1;
+    z-index: -1 !important;
 }
 
 .btn[type="approve"]:before {
@@ -100,9 +148,13 @@ table * [type="reject"]:hover svg {
     background-color: red;
 }
 
+.btns-container {
+    display: flex;
+}
+
 /* stats */
 #stats {
-    width: fit-content;
+    width: 100% !important;
     height: auto;
 
     display: flex;
@@ -110,7 +162,6 @@ table * [type="reject"]:hover svg {
 
     align-items: center;
 
-    /* background-color: thistle; */
     gap: 9px;
 
     padding: 9px 18px 0px;
@@ -118,9 +169,23 @@ table * [type="reject"]:hover svg {
 
 #stats * [data-clickable-id] {
     font-size: small;
-    font-weight: bold;
+    font-weight: bolder !important;
 
-    background-color: #00000018;
+    background-color: #87ceeb30;
+
+    outline: 1px solid skyblue;
+    outline-offset: -2px;
+}
+
+#stats *[data-clickable-id] td {
+    border: 7px solid transparent;
+    outline: 1px solid #fff;
+    outline-offset: -1px;
+}
+
+#stats * table {
+    border-collapse: separate;
+    border-spacing: 0 12px;
 }
 
 #stats * th,
@@ -128,12 +193,12 @@ table * [type="reject"]:hover svg {
     width: fit-content;
     min-width: 100px;
     text-align: center;
-    font-weight: lighter;
 }
 
 #stats * th {
-    font-weight: bold;
+    font-weight: bolder;
 }
+
 
 #stats * td:nth-of-type(1) {
     text-align: left;
@@ -142,6 +207,42 @@ table * [type="reject"]:hover svg {
 
 /* info */
 #info {
-    width: 90%;
+    width: 96%;
     align-self: center;
 }
+
+#info mark {
+    font-size: smaller;
+    font-weight: bold;
+    background-color: #87ceeb30 !important;
+    border: 1px solid skyblue;
+    padding: 9px;
+    border-radius: 6px;
+}
+
+
+/* notification-box */
+#notification-box.hide {
+    display: none;
+}
+
+#notification-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    padding: 3px 0;
+
+    background-color: #0e1111;
+    color: #ffe;
+}
+
+/* sortable */
+/* .sortable thead th.indicator-left::before {
+    margin-right: 3px;
+    content: '▸';
+} */

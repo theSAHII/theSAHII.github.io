@@ -10,15 +10,22 @@
     <link rel="stylesheet" href="../css/buttons.css">
     <link rel="stylesheet" href="../css/dashboard.css">
     <link rel="stylesheet" href="../css/admin.css">
+
+    <!-- <link href="https://cdn.jsdelivr.net/gh/tofsjonas/sortable/sortable.min.css" rel="stylesheet" /> -->
+    <!-- This will add arrows only -->
+    <link href="https://cdn.jsdelivr.net/gh/tofsjonas/sortable/sortable-base.min.css" rel="stylesheet" />
 </head>
 
 <body>
-    <h1>
-        <span>Welcome <var-username></var-username></span>
+
+    <div id="notification-box" class="hide"></div>
+
+    <h1 class="title">
+        <span>Hii <var-username></var-username></span>
         <button type="button" id="view-switcher" class="preventTextSelection">STATS</button>
     </h1>
 
-    <p id="info"></p>
+    <p id="info"><mark>REPORTS</mark></p>
 
     <div id="search-box">
         <input type="search" name="search" placeholder="Search" tabindex="0" accesskey="/">
@@ -34,7 +41,7 @@
                 <option value="half_yearly">half yearly</option>
                 <option value="yearly">yearly</option>
             </select>
-            <button type="button" id="sort-btn" class="preventTextSelection">ASC</button>
+            <!-- <button type="button" id="sort-btn" class="preventTextSelection">ASC</button> -->
             <p></p>
             <table id="daily"></table>
             <table id="weekly"></table>
@@ -43,15 +50,22 @@
             <table id="half_yearly"></table>
             <table id="yearly"></table>
         </div>
-        <table id="pending" class="container"></table>
-        <table id="reject" class="container"></table>
+        <table id="pending" class="container sortable"></table>
+        <table id="reject" class="container sortable"></table>
     </span>
 
+    <!-- external lib -->
     <script src="../lib/basket.full.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/gh/tofsjonas/sortable/sortable.min.js"></script> -->
+    <script src="../lib/sortable2.min.js"></script>
+    <!-- cookies -->
     <script src="../lib/CookieJS.js"></script>
+    <!-- lib -->
     <script src="../js/utils.js"></script>
     <script src="../js/calender.js"></script>
-    <script src="../js/dashboard.js"></script>
+    <!-- <script src="../js/tablesort.js"></script> -->
+    <script src="../js/dashboard vA.js"></script>
+    <!-- main -->
     <script src="../js/admin.js"></script>
 </body>
 
